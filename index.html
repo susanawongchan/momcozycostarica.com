@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Coming Soon</title>
+  <title>Momcozy Costa Rica</title>
 
   <style>
     body {
       margin: 0;
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      overflow: hidden;
+      background: white;
     }
 
-    img {
-      width: 100%;
+    .desktop {
+      width: 100vw;
       height: 100vh;
       object-fit: cover;
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
     }
   </style>
 </head>
 
 <body>
-  <img src="comingsoon.jpg" alt="Coming Soon">
+
+  <img src="comingsoon.jpg" class="desktop">
+
+  <img src="comingsoon-mobile.jpg" class="mobile">
+
 </body>
 </html>
